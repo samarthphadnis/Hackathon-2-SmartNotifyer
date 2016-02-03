@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+
+        <div class="panel-body">
+            <form class="form-horizontal ng-pristine ng-valid" name="uploadForm">
+				
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                        <input type="text" placeholder="Name" class="form-control" ng-model="doc.name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Type of Document</label>
+                    <div class="col-lg-10">
+                    	 <select class="form-control" ng-model="doc.type" ng-options="type as type.type for type in types">
+        				 </select>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-lg-2 control-label">Link</label>
+                    <div class="col-lg-10">
+                        <input type="text" placeholder="link" class="form-control" ng-model="doc.link">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Upload File</label>
+                    <div class="col-lg-10">
+                    	<input type="file" name="file" file-model="addLogoFile" ng-model="doc.logo" >
+                    </div>
+                </div>
+                <div class="form-group">
+					
+				<button id="singlebutton" name="singlebutton" class="btn btn-info center-block" type="submit" ng-click="submitForm()">
+				 Submit
+				</button>
+                </div>
+                </form>
+                </div>
+                </div>
